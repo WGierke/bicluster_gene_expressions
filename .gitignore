@@ -104,6 +104,6 @@ venv.bak/
 .mypy_cache/
 
 # Data
-*.csv
+data/raw
 
 .idea

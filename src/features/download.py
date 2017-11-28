@@ -1,9 +1,11 @@
 import csv
-from io import StringIO
-from ..config import EXTERNAL_DATA_PATH
-import os
-import requests
 import json
+import os
+from io import StringIO
+
+import requests
+
+from ..config import EXTERNAL_DATA_PATH
 
 STRING_DB_INTERACTIONS_QUERY = "http://string-db.org/api/psi-mi-tab/interactionsList?identifiers={identifier}&required_score={min_score}"
 STRING_DB_IDENTIFIERS_QUERY = "http://string-db.org/api/json/resolveList?identifiers={identifier}"
@@ -14,6 +16,8 @@ DEFAULT_MIN_SCORE = 400
 def get_string_db_identifier(identifier='ENSP00000362116'):
     result = requests.get(STRING_DB_IDENTIFIERS_QUERY.format(**locals()))
     identifiers = result.json()
+    if not identifiers:
+        raise ValueError("Identifier is unknown to StringDB: {}".format(identifier))
     homo_sapiens_match = None
     for match_identifier in identifiers:
         if 'Homo sapiens' in match_identifier.values():
@@ -52,6 +56,7 @@ def get_associated_genes(identifier=DEFAULT_IDENTIFIER, min_score=DEFAULT_MIN_SC
             continue
     return gene_scores
 
+
 def save_associated_genes(identifiers=[DEFAULT_IDENTIFIER]):
     for identifier in identifiers:
         try:
@@ -59,7 +64,6 @@ def save_associated_genes(identifiers=[DEFAULT_IDENTIFIER]):
         except Exception as e:
             print("Exception with {}: {}".format(identifier, e))
             continue
-
         file_path = os.path.join(EXTERNAL_DATA_PATH, "{}.json".format(identifier))
         if os.path.isfile(file_path):
             continue
@@ -68,5 +72,7 @@ def save_associated_genes(identifiers=[DEFAULT_IDENTIFIER]):
         associated_list = []
         for gene in associated_genes:
             associated_list.append({'string': gene[0], 'name': gene[1], 'score': gene[2]})
+        associated_data = {'identifier': string_db_identifier, 'data': associated_list}
         with open(file_path, 'w') as f:
-            f.write(json.dumps(associated_list))
+            f.write(json.dumps(associated_data))
+        print("Saved associated genes for {}".format(identifier))

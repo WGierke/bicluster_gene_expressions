@@ -1,1 +1,135 @@
-{"identifier": "9606.ENSP00000252242", "data": [{"string": "string:9606.ENSP00000167586", "name": "KRT14", "score": "score:0.99|ascore:0.667|escore:0.838|tscore:0.843"}, {"string": "string:9606.ENSP00000360266", "name": "JUN", "score": "score:0.925|ascore:0.053|dscore:0.9|tscore:0.277"}, {"string": "string:9606.ENSP00000306245", "name": "FOS", "score": "score:0.918|ascore:0.054|dscore:0.9|tscore:0.21"}, {"string": "string:9606.ENSP00000301653", "name": "KRT16", "score": "score:0.891|ascore:0.261|escore:0.838|tscore:0.131688"}, {"string": "string:9606.ENSP00000269576", "name": "KRT10", "score": "score:0.83|ascore:0.099|escore:0.774|tscore:0.206124"}, {"string": "string:9606.ENSP00000413479", "name": "KRT3", "score": "score:0.791|ascore:0.093|escore:0.774|tscore:0.023488"}, {"string": "string:9606.ENSP00000310861", "name": "KRT2", "score": "score:0.79|ascore:0.091|escore:0.774|tscore:0.017836"}, {"string": "string:9606.ENSP00000252244", "name": "KRT1", "score": "score:0.79|ascore:0.086|escore:0.774|tscore:0.023735"}, {"string": "string:9606.ENSP00000269571", "name": "ERBB2", "score": "score:0.703|tscore:0.703"}, {"string": "string:9606.ENSP00000275493", "name": "EGFR", "score": "score:0.695|escore:0.143|tscore:0.659"}]}
+{
+    "data": [
+        {
+            "ascore": 0.667,
+            "dscore": 0,
+            "escore": 0.838,
+            "fscore": 0,
+            "ncbiTaxonId": "9606",
+            "nscore": 0,
+            "preferredName": "KRT14",
+            "pscore": 0,
+            "score": 0.99,
+            "stringId": "ENSP00000167586",
+            "tscore": 0.843
+        },
+        {
+            "ascore": 0.086,
+            "dscore": 0,
+            "escore": 0.774,
+            "fscore": 0,
+            "ncbiTaxonId": "9606",
+            "nscore": 0,
+            "preferredName": "KRT1",
+            "pscore": 0,
+            "score": 0.79,
+            "stringId": "ENSP00000252244",
+            "tscore": 0.023735
+        },
+        {
+            "ascore": 0,
+            "dscore": 0,
+            "escore": 0,
+            "fscore": 0,
+            "ncbiTaxonId": "9606",
+            "nscore": 0,
+            "preferredName": "ERBB2",
+            "pscore": 0,
+            "score": 0.703,
+            "stringId": "ENSP00000269571",
+            "tscore": 0.703
+        },
+        {
+            "ascore": 0.099,
+            "dscore": 0,
+            "escore": 0.774,
+            "fscore": 0,
+            "ncbiTaxonId": "9606",
+            "nscore": 0,
+            "preferredName": "KRT10",
+            "pscore": 0,
+            "score": 0.83,
+            "stringId": "ENSP00000269576",
+            "tscore": 0.206124
+        },
+        {
+            "ascore": 0,
+            "dscore": 0,
+            "escore": 0.143,
+            "fscore": 0,
+            "ncbiTaxonId": "9606",
+            "nscore": 0,
+            "preferredName": "EGFR",
+            "pscore": 0,
+            "score": 0.695,
+            "stringId": "ENSP00000275493",
+            "tscore": 0.659
+        },
+        {
+            "ascore": 0.261,
+            "dscore": 0,
+            "escore": 0.838,
+            "fscore": 0,
+            "ncbiTaxonId": "9606",
+            "nscore": 0,
+            "preferredName": "KRT16",
+            "pscore": 0,
+            "score": 0.891,
+            "stringId": "ENSP00000301653",
+            "tscore": 0.131688
+        },
+        {
+            "ascore": 0.054,
+            "dscore": 0.9,
+            "escore": 0,
+            "fscore": 0,
+            "ncbiTaxonId": "9606",
+            "nscore": 0,
+            "preferredName": "FOS",
+            "pscore": 0,
+            "score": 0.918,
+            "stringId": "ENSP00000306245",
+            "tscore": 0.21
+        },
+        {
+            "ascore": 0.091,
+            "dscore": 0,
+            "escore": 0.774,
+            "fscore": 0,
+            "ncbiTaxonId": "9606",
+            "nscore": 0,
+            "preferredName": "KRT2",
+            "pscore": 0,
+            "score": 0.79,
+            "stringId": "ENSP00000310861",
+            "tscore": 0.017836
+        },
+        {
+            "ascore": 0.053,
+            "dscore": 0.9,
+            "escore": 0,
+            "fscore": 0,
+            "ncbiTaxonId": "9606",
+            "nscore": 0,
+            "preferredName": "JUN",
+            "pscore": 0,
+            "score": 0.925,
+            "stringId": "ENSP00000360266",
+            "tscore": 0.277
+        },
+        {
+            "ascore": 0.093,
+            "dscore": 0,
+            "escore": 0.774,
+            "fscore": 0,
+            "ncbiTaxonId": "9606",
+            "nscore": 0,
+            "preferredName": "KRT3",
+            "pscore": 0,
+            "score": 0.791,
+            "stringId": "ENSP00000413479",
+            "tscore": 0.023488
+        }
+    ],
+    "identifier": "ENSP00000252242"
+}

@@ -1,1 +1,135 @@
-{"identifier": "9606.ENSP00000346879", "data": [{"string": "string:9606.ENSP00000250448", "name": "FOXA1", "score": "score:0.967|ascore:0.054|escore:0.068|dscore:0.9|tscore:0.674"}, {"string": "string:9606.ENSP00000315955", "name": "FOXA2", "score": "score:0.956|ascore:0.054|escore:0.068|dscore:0.9|tscore:0.568"}, {"string": "string:9606.ENSP00000262426", "name": "FOXF1", "score": "score:0.929|ascore:0.054|escore:0.068|dscore:0.9|tscore:0.295"}, {"string": "string:9606.ENSP00000395498", "name": "PAX8", "score": "score:0.906|escore:0.41|tscore:0.847"}, {"string": "string:9606.ENSP00000377409", "name": "SFTPB", "score": "score:0.892|ascore:0.159|tscore:0.877"}, {"string": "string:9606.ENSP00000220616", "name": "TG", "score": "score:0.855|ascore:0.049|tscore:0.854"}, {"string": "string:9606.ENSP00000316152", "name": "SFTPC", "score": "score:0.851|ascore:0.084|tscore:0.844"}, {"string": "string:9606.ENSP00000269216", "name": "GATA6", "score": "score:0.841|ascore:0.054|escore:0.376|tscore:0.75"}, {"string": "string:9606.ENSP00000298171", "name": "TSHR", "score": "score:0.809|ascore:0.09|tscore:0.799"}, {"string": "string:9606.ENSP00000297261", "name": "SHH", "score": "score:0.797|tscore:0.797"}]}
+{
+    "data": [
+        {
+            "ascore": 0.049,
+            "dscore": 0,
+            "escore": 0,
+            "fscore": 0,
+            "ncbiTaxonId": "9606",
+            "nscore": 0,
+            "preferredName": "TG",
+            "pscore": 0,
+            "score": 0.855,
+            "stringId": "ENSP00000220616",
+            "tscore": 0.854
+        },
+        {
+            "ascore": 0.054,
+            "dscore": 0.9,
+            "escore": 0.068,
+            "fscore": 0,
+            "ncbiTaxonId": "9606",
+            "nscore": 0,
+            "preferredName": "FOXA1",
+            "pscore": 0,
+            "score": 0.967,
+            "stringId": "ENSP00000250448",
+            "tscore": 0.674
+        },
+        {
+            "ascore": 0.054,
+            "dscore": 0.9,
+            "escore": 0.068,
+            "fscore": 0,
+            "ncbiTaxonId": "9606",
+            "nscore": 0,
+            "preferredName": "FOXF1",
+            "pscore": 0,
+            "score": 0.929,
+            "stringId": "ENSP00000262426",
+            "tscore": 0.295
+        },
+        {
+            "ascore": 0.054,
+            "dscore": 0,
+            "escore": 0.376,
+            "fscore": 0,
+            "ncbiTaxonId": "9606",
+            "nscore": 0,
+            "preferredName": "GATA6",
+            "pscore": 0,
+            "score": 0.841,
+            "stringId": "ENSP00000269216",
+            "tscore": 0.75
+        },
+        {
+            "ascore": 0,
+            "dscore": 0,
+            "escore": 0,
+            "fscore": 0,
+            "ncbiTaxonId": "9606",
+            "nscore": 0,
+            "preferredName": "SHH",
+            "pscore": 0,
+            "score": 0.797,
+            "stringId": "ENSP00000297261",
+            "tscore": 0.797
+        },
+        {
+            "ascore": 0.09,
+            "dscore": 0,
+            "escore": 0,
+            "fscore": 0,
+            "ncbiTaxonId": "9606",
+            "nscore": 0,
+            "preferredName": "TSHR",
+            "pscore": 0,
+            "score": 0.809,
+            "stringId": "ENSP00000298171",
+            "tscore": 0.799
+        },
+        {
+            "ascore": 0.054,
+            "dscore": 0.9,
+            "escore": 0.068,
+            "fscore": 0,
+            "ncbiTaxonId": "9606",
+            "nscore": 0,
+            "preferredName": "FOXA2",
+            "pscore": 0,
+            "score": 0.956,
+            "stringId": "ENSP00000315955",
+            "tscore": 0.568
+        },
+        {
+            "ascore": 0.084,
+            "dscore": 0,
+            "escore": 0,
+            "fscore": 0,
+            "ncbiTaxonId": "9606",
+            "nscore": 0,
+            "preferredName": "SFTPC",
+            "pscore": 0,
+            "score": 0.851,
+            "stringId": "ENSP00000316152",
+            "tscore": 0.844
+        },
+        {
+            "ascore": 0.159,
+            "dscore": 0,
+            "escore": 0,
+            "fscore": 0,
+            "ncbiTaxonId": "9606",
+            "nscore": 0,
+            "preferredName": "SFTPB",
+            "pscore": 0,
+            "score": 0.892,
+            "stringId": "ENSP00000377409",
+            "tscore": 0.877
+        },
+        {
+            "ascore": 0,
+            "dscore": 0,
+            "escore": 0.41,
+            "fscore": 0,
+            "ncbiTaxonId": "9606",
+            "nscore": 0,
+            "preferredName": "PAX8",
+            "pscore": 0,
+            "score": 0.906,
+            "stringId": "ENSP00000395498",
+            "tscore": 0.847
+        }
+    ],
+    "identifier": "ENSP00000346879"
+}

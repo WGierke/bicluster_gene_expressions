@@ -1,19 +1,17 @@
-import csv
 import json
 import os
-from io import StringIO
 
 import requests
 
 from ..config import EXTERNAL_DATA_PATH
 
-STRING_DB_INTERACTIONS_QUERY = "http://string-db.org/api/psi-mi-tab/interactionsList?identifiers={identifier}&required_score={min_score}"
-STRING_DB_IDENTIFIERS_QUERY = "http://string-db.org/api/json/resolveList?identifiers={identifier}"
+STRING_DB_INTERACTIONS_QUERY = "http://string-db.org/api/json/interactionsList?identifiers={identifier}&required_score={min_score}"
+STRING_DB_IDENTIFIERS_QUERY = "http://string-db.org/api/json/resolveList?identifiers={identifier}&species=9606"
 DEFAULT_IDENTIFIER = 'ENSP00000362116'
 DEFAULT_MIN_SCORE = 400
 
 
-def get_string_db_identifier(identifier='ENSP00000362116'):
+def get_string_db_identifier(identifier=DEFAULT_IDENTIFIER):
     result = requests.get(STRING_DB_IDENTIFIERS_QUERY.format(**locals()))
     identifiers = result.json()
     if not identifiers:
@@ -25,12 +23,19 @@ def get_string_db_identifier(identifier='ENSP00000362116'):
                 homo_sapiens_match = match_identifier
             else:
                 raise ValueError("Two matching identifiers for {} in a human found: {}".format(identifier, identifiers))
-    return homo_sapiens_match['stringId']
+    return homo_sapiens_match['stringId'].split('9606.')[1]  # Only return the ensemble identifier without the species
 
 
 def get_string_db_genes(identifier=DEFAULT_IDENTIFIER, min_score=DEFAULT_MIN_SCORE):
+    """
+    Get the associated genes of an unsafe gene identifier
+    :param identifier: unsafe identifier e.g. PGC
+    :param min_score: minimal score of the associations
+    :return: used StringDB identifier, resulting interactions
+    """
+    identifier = get_string_db_identifier(identifier)
     result = requests.get(STRING_DB_INTERACTIONS_QUERY.format(**locals()))
-    return result.text
+    return identifier, result.json()
 
 
 def get_associated_genes(identifier=DEFAULT_IDENTIFIER, min_score=DEFAULT_MIN_SCORE):
@@ -38,41 +43,50 @@ def get_associated_genes(identifier=DEFAULT_IDENTIFIER, min_score=DEFAULT_MIN_SC
 
     :param identifier: Identifier of the gene e.g. ENSP00000362116 or PGC
     :param min_score: Minimal confidence score of the association
-    :return: List of tuples of gene string, gene name and confidence score
+    :return: List of dict of gene string, gene name and scores with keys 'pscore', 'ascore', 'tscore', 'fscore',
+    'escore', 'preferredName', 'stringId', 'nscore', 'ncbiTaxonId', 'score', 'dscore'
     """
-    content = get_string_db_genes(**locals())
-    f = StringIO(str(content))
+    string_db_identifier, association_list = get_string_db_genes(**locals())
     gene_scores = []
-    reader = csv.reader(f, delimiter='\t')
-    # Check for each row whether the gene string or gene name contains the identifier
-    # Add the remaining game to the associated gene list
-    for row in reader:
-        gene1_string, gene2_string, gene1_name, gene2_name, _, _, _, _, _, _, _, _, _, _, scores = row
-        if identifier in gene1_string or identifier in gene1_name:
-            gene_scores.append((gene2_string, gene2_name, scores))
+    for association in association_list:
+        gene1_string, gene2_string = association["stringId_A"], association["stringId_B"]
+        if gene1_string in [identifier, string_db_identifier]:
+            association["stringId"] = association["stringId_B"]
+            association["preferredName"] = association["preferredName_B"]
+        elif gene2_string in [identifier, string_db_identifier]:
+            association["stringId"] = association["stringId_A"]
+            association["preferredName"] = association["preferredName_A"]
+        else:
             continue
-        if identifier in gene2_string or identifier in gene2_name:
-            gene_scores.append((gene1_string, gene1_name, scores))
-            continue
+        del association["stringId_A"]
+        del association["stringId_B"]
+        del association["preferredName_A"]
+        del association["preferredName_B"]
+        gene_scores.append(association)
     return gene_scores
 
 
 def save_associated_genes(identifiers=[DEFAULT_IDENTIFIER]):
+    """
+    Save the associated genes of the given identifiers to files.
+    :param identifiers: gene identifiers, not necessarily validated
+    """
     for identifier in identifiers:
-        try:
-            string_db_identifier = get_string_db_identifier(identifier)
-        except Exception as e:
-            print("Exception with {}: {}".format(identifier, e))
-            continue
         file_path = os.path.join(EXTERNAL_DATA_PATH, "{}.json".format(identifier))
         if os.path.isfile(file_path):
             continue
-
-        associated_genes = get_associated_genes(string_db_identifier)
-        associated_list = []
-        for gene in associated_genes:
-            associated_list.append({'string': gene[0], 'name': gene[1], 'score': gene[2]})
-        associated_data = {'identifier': string_db_identifier, 'data': associated_list}
+        associated_genes = get_associated_genes(identifier)
+        content = {"identifier": get_string_db_identifier(identifier), "data": associated_genes}
         with open(file_path, 'w') as f:
-            f.write(json.dumps(associated_data))
+            f.write(json.dumps(content, sort_keys=True, indent=4, separators=(',', ': ')))
         print("Saved associated genes for {}".format(identifier))
+
+
+def load_associated_genes(identifier=DEFAULT_IDENTIFIER):
+    file_path = os.path.join(EXTERNAL_DATA_PATH, "{}.json".format(identifier))
+    if not os.path.isfile(file_path):
+        raise ValueError("File does not exist: {}".format(file_path))
+
+    with open(file_path, 'r') as f:
+        content = f.read()
+    return json.loads(content)["data"]

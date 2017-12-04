@@ -1,1 +1,135 @@
-{"identifier": "9606.ENSP00000371483", "data": [{"string": "string:9606.ENSP00000244527", "name": "SLC17A1", "score": "score:0.82|ascore:0.048|tscore:0.819"}, {"string": "string:9606.ENSP00000340465", "name": "SLC20A2", "score": "score:0.642|nscore:0.093|tscore:0.621"}, {"string": "string:9606.ENSP00000272542", "name": "SLC20A1", "score": "score:0.55|nscore:0.093|tscore:0.525"}, {"string": "string:9606.ENSP00000361366", "name": "SFTPD", "score": "score:0.538|ascore:0.411|tscore:0.248"}, {"string": "string:9606.ENSP00000265171", "name": "EGF", "score": "score:0.507|ascore:0.055|tscore:0.499"}, {"string": "string:9606.ENSP00000316152", "name": "SFTPC", "score": "score:0.474|ascore:0.308|tscore:0.271"}, {"string": "string:9606.ENSP00000377409", "name": "SFTPB", "score": "score:0.455|ascore:0.302|tscore:0.25"}, {"string": "string:9606.ENSP00000266088", "name": "SLC5A1", "score": "score:0.449|ascore:0.074|tscore:0.429"}, {"string": "string:9606.ENSP00000397082", "name": "SFTPA1", "score": "score:0.444|ascore:0.323|tscore:0.211"}, {"string": "string:9606.ENSP00000237837", "name": "FGF23", "score": "score:0.442|ascore:0.046|tscore:0.44"}]}
+{
+    "data": [
+        {
+            "ascore": 0.046,
+            "dscore": 0,
+            "escore": 0,
+            "fscore": 0,
+            "ncbiTaxonId": "9606",
+            "nscore": 0,
+            "preferredName": "FGF23",
+            "pscore": 0,
+            "score": 0.442,
+            "stringId": "ENSP00000237837",
+            "tscore": 0.44
+        },
+        {
+            "ascore": 0.048,
+            "dscore": 0,
+            "escore": 0,
+            "fscore": 0,
+            "ncbiTaxonId": "9606",
+            "nscore": 0,
+            "preferredName": "SLC17A1",
+            "pscore": 0,
+            "score": 0.82,
+            "stringId": "ENSP00000244527",
+            "tscore": 0.819
+        },
+        {
+            "ascore": 0.055,
+            "dscore": 0,
+            "escore": 0,
+            "fscore": 0,
+            "ncbiTaxonId": "9606",
+            "nscore": 0,
+            "preferredName": "EGF",
+            "pscore": 0,
+            "score": 0.507,
+            "stringId": "ENSP00000265171",
+            "tscore": 0.499
+        },
+        {
+            "ascore": 0.074,
+            "dscore": 0,
+            "escore": 0,
+            "fscore": 0,
+            "ncbiTaxonId": "9606",
+            "nscore": 0,
+            "preferredName": "SLC5A1",
+            "pscore": 0,
+            "score": 0.449,
+            "stringId": "ENSP00000266088",
+            "tscore": 0.429
+        },
+        {
+            "ascore": 0,
+            "dscore": 0,
+            "escore": 0,
+            "fscore": 0,
+            "ncbiTaxonId": "9606",
+            "nscore": 0.093,
+            "preferredName": "SLC20A1",
+            "pscore": 0,
+            "score": 0.55,
+            "stringId": "ENSP00000272542",
+            "tscore": 0.525
+        },
+        {
+            "ascore": 0.308,
+            "dscore": 0,
+            "escore": 0,
+            "fscore": 0,
+            "ncbiTaxonId": "9606",
+            "nscore": 0,
+            "preferredName": "SFTPC",
+            "pscore": 0,
+            "score": 0.474,
+            "stringId": "ENSP00000316152",
+            "tscore": 0.271
+        },
+        {
+            "ascore": 0,
+            "dscore": 0,
+            "escore": 0,
+            "fscore": 0,
+            "ncbiTaxonId": "9606",
+            "nscore": 0.093,
+            "preferredName": "SLC20A2",
+            "pscore": 0,
+            "score": 0.642,
+            "stringId": "ENSP00000340465",
+            "tscore": 0.621
+        },
+        {
+            "ascore": 0.411,
+            "dscore": 0,
+            "escore": 0,
+            "fscore": 0,
+            "ncbiTaxonId": "9606",
+            "nscore": 0,
+            "preferredName": "SFTPD",
+            "pscore": 0,
+            "score": 0.538,
+            "stringId": "ENSP00000361366",
+            "tscore": 0.248
+        },
+        {
+            "ascore": 0.302,
+            "dscore": 0,
+            "escore": 0,
+            "fscore": 0,
+            "ncbiTaxonId": "9606",
+            "nscore": 0,
+            "preferredName": "SFTPB",
+            "pscore": 0,
+            "score": 0.455,
+            "stringId": "ENSP00000377409",
+            "tscore": 0.25
+        },
+        {
+            "ascore": 0.323,
+            "dscore": 0,
+            "escore": 0,
+            "fscore": 0,
+            "ncbiTaxonId": "9606",
+            "nscore": 0,
+            "preferredName": "SFTPA1",
+            "pscore": 0,
+            "score": 0.444,
+            "stringId": "ENSP00000397082",
+            "tscore": 0.211
+        }
+    ],
+    "identifier": "ENSP00000371483"
+}

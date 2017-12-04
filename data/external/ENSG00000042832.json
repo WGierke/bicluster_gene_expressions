@@ -1,1 +1,135 @@
-{"identifier": "9606.ENSP00000220616", "data": [{"string": "string:9606.ENSP00000318820", "name": "TPO", "score": "score:0.944|ascore:0.222|escore:0.079|tscore:0.928"}, {"string": "string:9606.ENSP00000263816", "name": "LRP2", "score": "score:0.903|escore:0.36|dscore:0.8|tscore:0.305"}, {"string": "string:9606.ENSP00000298171", "name": "TSHR", "score": "score:0.893|ascore:0.212|tscore:0.87"}, {"string": "string:9606.ENSP00000269299", "name": "ASGR1", "score": "score:0.88|escore:0.36|dscore:0.8|tscore:0.141"}, {"string": "string:9606.ENSP00000346879", "name": "NKX2-1", "score": "score:0.855|ascore:0.049|tscore:0.854"}, {"string": "string:9606.ENSP00000250971", "name": "INS", "score": "score:0.84|ascore:0.049|tscore:0.839"}, {"string": "string:9606.ENSP00000222248", "name": "SLC5A5", "score": "score:0.814|ascore:0.051|tscore:0.813"}, {"string": "string:9606.ENSP00000395498", "name": "PAX8", "score": "score:0.811|ascore:0.267|tscore:0.752"}, {"string": "string:9606.ENSP00000347140", "name": "ASGR2", "score": "score:0.8|dscore:0.8|tscore:0.041"}, {"string": "string:9606.ENSP00000295897", "name": "ALB", "score": "score:0.789|ascore:0.05|tscore:0.787"}]}
+{
+    "data": [
+        {
+            "ascore": 0.051,
+            "dscore": 0,
+            "escore": 0,
+            "fscore": 0,
+            "ncbiTaxonId": "9606",
+            "nscore": 0,
+            "preferredName": "SLC5A5",
+            "pscore": 0,
+            "score": 0.814,
+            "stringId": "ENSP00000222248",
+            "tscore": 0.813
+        },
+        {
+            "ascore": 0.049,
+            "dscore": 0,
+            "escore": 0,
+            "fscore": 0,
+            "ncbiTaxonId": "9606",
+            "nscore": 0,
+            "preferredName": "INS",
+            "pscore": 0,
+            "score": 0.84,
+            "stringId": "ENSP00000250971",
+            "tscore": 0.839
+        },
+        {
+            "ascore": 0,
+            "dscore": 0.8,
+            "escore": 0.36,
+            "fscore": 0,
+            "ncbiTaxonId": "9606",
+            "nscore": 0,
+            "preferredName": "LRP2",
+            "pscore": 0,
+            "score": 0.903,
+            "stringId": "ENSP00000263816",
+            "tscore": 0.305
+        },
+        {
+            "ascore": 0,
+            "dscore": 0.8,
+            "escore": 0.36,
+            "fscore": 0,
+            "ncbiTaxonId": "9606",
+            "nscore": 0,
+            "preferredName": "ASGR1",
+            "pscore": 0,
+            "score": 0.88,
+            "stringId": "ENSP00000269299",
+            "tscore": 0.141
+        },
+        {
+            "ascore": 0.05,
+            "dscore": 0,
+            "escore": 0,
+            "fscore": 0,
+            "ncbiTaxonId": "9606",
+            "nscore": 0,
+            "preferredName": "ALB",
+            "pscore": 0,
+            "score": 0.789,
+            "stringId": "ENSP00000295897",
+            "tscore": 0.787
+        },
+        {
+            "ascore": 0.212,
+            "dscore": 0,
+            "escore": 0,
+            "fscore": 0,
+            "ncbiTaxonId": "9606",
+            "nscore": 0,
+            "preferredName": "TSHR",
+            "pscore": 0,
+            "score": 0.893,
+            "stringId": "ENSP00000298171",
+            "tscore": 0.87
+        },
+        {
+            "ascore": 0.222,
+            "dscore": 0,
+            "escore": 0.079,
+            "fscore": 0,
+            "ncbiTaxonId": "9606",
+            "nscore": 0,
+            "preferredName": "TPO",
+            "pscore": 0,
+            "score": 0.944,
+            "stringId": "ENSP00000318820",
+            "tscore": 0.928
+        },
+        {
+            "ascore": 0.049,
+            "dscore": 0,
+            "escore": 0,
+            "fscore": 0,
+            "ncbiTaxonId": "9606",
+            "nscore": 0,
+            "preferredName": "NKX2-1",
+            "pscore": 0,
+            "score": 0.855,
+            "stringId": "ENSP00000346879",
+            "tscore": 0.854
+        },
+        {
+            "ascore": 0,
+            "dscore": 0.8,
+            "escore": 0,
+            "fscore": 0,
+            "ncbiTaxonId": "9606",
+            "nscore": 0,
+            "preferredName": "ASGR2",
+            "pscore": 0,
+            "score": 0.8,
+            "stringId": "ENSP00000347140",
+            "tscore": 0.041
+        },
+        {
+            "ascore": 0.267,
+            "dscore": 0,
+            "escore": 0,
+            "fscore": 0,
+            "ncbiTaxonId": "9606",
+            "nscore": 0,
+            "preferredName": "PAX8",
+            "pscore": 0,
+            "score": 0.811,
+            "stringId": "ENSP00000395498",
+            "tscore": 0.752
+        }
+    ],
+    "identifier": "ENSP00000220616"
+}

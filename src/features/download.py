@@ -85,7 +85,7 @@ def save_associated_genes(identifiers=[DEFAULT_IDENTIFIER]):
 def load_associated_genes(identifier=DEFAULT_IDENTIFIER):
     file_path = os.path.join(EXTERNAL_DATA_PATH, "{}.json".format(identifier))
     if not os.path.isfile(file_path):
-        raise ValueError("File does not exist: {}".format(file_path))
+        save_associated_genes([identifier])
 
     with open(file_path, 'r') as f:
         content = f.read()

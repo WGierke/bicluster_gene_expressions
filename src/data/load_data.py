@@ -28,7 +28,7 @@ def get_big_dataset_content(cached=True):
     else:
         big_df_meta = pd.read_csv(BIG_SET_META_PATH)
         df = pd.read_csv(BIG_SET_PATH)
-        df = fix_columns_and_index()
+        df = fix_columns_and_index(df)
 
         # Retrieve the cancer types for each record in the big DataFrame
         df.dropna(axis=(0, 1), inplace=True)
